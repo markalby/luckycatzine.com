@@ -4,11 +4,11 @@ const path = require("path");
 const rootDirs = ["assets/scss", "layouts"];
 const configFiles = [
   {
-    filePath: "exampleSite/tailwind.config.js",
+    filePath: "./tailwind.config.js",
     patterns: ["darkmode:\\s*{[^}]*},", 'darkMode:\\s*"class",'],
   },
   {
-    filePath: "exampleSite/data/theme.json",
+    filePath: "./data/theme.json",
     patterns: ["colors.darkmode"],
   },
 ];
@@ -45,7 +45,7 @@ function removeDarkModeFromPages(directoryPath) {
 
 function removeDarkMode(configFile) {
   const { filePath, patterns } = configFile;
-  if (filePath === "exampleSite/tailwind.config.js") {
+  if (filePath === "./tailwind.config.js") {
     removeDarkModeFromFiles(filePath, patterns);
   } else {
     const contentFile = JSON.parse(fs.readFileSync(filePath, "utf8"));

@@ -1,1 +1,41 @@
 // Add your own custom styles here
+:root {
+    --red: #A63737;
+    --dark-red: #481E1E;
+    --beige: #F2E0C9;
+    --white: #fff;
+    --yellow: #F2A649;
+}
+
+.page-template {
+    &__home {
+        .default-header {
+            display: none;
+        }
+    }
+}
+
+.homepage-menu {
+    background-color: var(--red);
+    * {
+        color: var(--white);
+    }
+    width: fit-content;
+    margin-top: 20svh;
+    border: 1rem solid var(--red);
+    border-radius: 11rem 11rem 2rem 2rem;
+    outline: 1rem solid var(--white);
+    .nav-item {
+        font-size: 1.5rem;
+    }
+    #nav-menu__homepage {
+        margin-top: -2.3rem;
+        a {
+            color: var(--white) !important;
+            &:hover, &:focus, &:focus-within, &:focus-visible {
+                outline: 1px solid var(--white);
+                border-radius: 1.25rem;
+            }
+        }
+    }
+}

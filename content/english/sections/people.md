@@ -1,7 +1,7 @@
 ---
 enable: false
 title: "People"
-description: "This is a short description about us. PEOPLEPOEPL"
+description: "This is a short description about us."
 
 # Testimonials
 testimonials:
